@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="text-center mt-5">
+    <h1>Welcome to AiReminders</h1>
+    <p class="lead">Your smart assistant for Work Anniversary Email Reminders</p>
+
+    {% if not session.get('user_id') %}
+        <a href="{{ url_for('google.login') }}" class="btn btn-primary btn-lg">Login with Google</a>
+    {% else %}
+        <a href="{{ url_for('main.dashboard') }}" class="btn btn-success btn-lg">Go to Dashboard</a>
+        <a href="{{ url_for('auth.logout') }}" class="btn btn-danger btn-lg ms-2">Logout</a>
+    {% endif %}
+</div>
+{% endblock %}
