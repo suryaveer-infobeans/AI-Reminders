@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="text-center mt-5">
+<div class="text-center pt-5">
     <h2>Hello, {{ user.name }}!</h2>
     <p>Your email: {{ user.email }}</p>
     <a href="{{ url_for('auth.logout') }}" class="btn btn-danger">Logout</a>
